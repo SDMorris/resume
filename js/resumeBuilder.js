@@ -108,18 +108,23 @@ bio.display = function(){
 
   formatedinfo = HTMLmobile.replace ("%data%", bio.contacts.mobile);
   $("#topContacts").append(formatedinfo);
+  $("#footerContacts").append(formatedinfo);
 
   formatedinfo = HTMLemail.replace ("%data%", bio.contacts.email);
   $("#topContacts").append(formatedinfo);
+  $("#footerContacts").append(formatedinfo);
 
   formatedinfo = HTMLtwitter.replace ("%data%", bio.contacts.twitter);
   $("#topContacts").append(formatedinfo);
+  $("#footerContacts").append(formatedinfo);
 
   formatedinfo = HTMLgithub.replace ("%data%", bio.contacts.github);
   $("#topContacts").append(formatedinfo);
+  $("#footerContacts").append(formatedinfo);
 
-  formatedinfo = HTMLlocation.replace ("%data%", bio.location);
+  formatedinfo = HTMLlocation.replace ("%data%", bio.contacts.location);
   $("#topContacts").append(formatedinfo);
+  $("#footerContacts").append(formatedinfo);
 
   formatedinfo = HTMLwelcomeMsg.replace ("%data%", bio.welcome_message);
   $("#header").append(formatedinfo);
@@ -216,6 +221,8 @@ education.display();
 
 $("#mapDiv").append(googleMap);
 
+
+
 //var internationalizeButton = '<button>Internationalize</button>';
 $("#main").append(internationalizeButton);
 
@@ -234,4 +241,3 @@ function inName( str1 ) {
   var finalName = finit1.toUpperCase() + finit2.toLowerCase() + " " + secondstr.toUpperCase();
   return finalName;
 }
-
